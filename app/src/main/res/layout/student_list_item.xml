@@ -36,7 +36,7 @@
                 app:srcCompat="@drawable/ic_launcher_foreground" />
 
             <TextView
-                android:id="@+id/txtIdCar"
+                android:id="@+id/txtId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -55,8 +55,8 @@
                 android:text="TextView"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/txtIdCar"
-                app:layout_constraintTop_toBottomOf="@+id/txtIdCar" />
+                app:layout_constraintStart_toStartOf="@+id/txtId"
+                app:layout_constraintTop_toBottomOf="@+id/txtId" />
 
             <Button
                 android:id="@+id/btnDetail"

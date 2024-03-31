@@ -37,13 +37,13 @@ class CarListFragment : Fragment() {
 
         Log.d("TEST", "masuk")
 
-        binding.recView.layoutManager = LinearLayoutManager(context)
-        binding.recView.adapter = carListAdapter
+        binding.recViewCar.layoutManager = LinearLayoutManager(context)
+        binding.recViewCar.adapter = carListAdapter
 
         val swipe = view.findViewById<SwipeRefreshLayout>(R.id.refreshLayout)
         binding.refreshLayout.setOnRefreshListener {
             viewModel.refresh()
-            binding.recView.visibility =  View.GONE
+            binding.recViewCar.visibility =  View.GONE
             binding.txtEror.visibility = View.GONE
             binding.progressBarCar.visibility = View.VISIBLE
             binding.refreshLayout.isRefreshing = false
@@ -57,10 +57,10 @@ class CarListFragment : Fragment() {
         })
         viewModel.loadingLD.observe(viewLifecycleOwner, Observer {
             if(it == true) {
-                binding.recView.visibility = View.GONE
+                binding.recViewCar.visibility = View.GONE
                 binding.progressBarCar.visibility = View.VISIBLE
             } else {
-                binding.recView.visibility = View.VISIBLE
+                binding.recViewCar.visibility = View.VISIBLE
                 binding.progressBarCar.visibility = View.GONE
             }
         })
