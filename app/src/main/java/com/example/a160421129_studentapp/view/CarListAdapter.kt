@@ -26,6 +26,8 @@ class CarListAdapter(val carList: ArrayList<Cars>)
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
         holder.binding.txtIdCar.text = carList[position].id
         holder.binding.txtMake.text = carList[position].make
+        holder.binding.txtModel.text = carList[position].model
+
     }
 
     fun updateCarList(newCarList: ArrayList<Cars>){

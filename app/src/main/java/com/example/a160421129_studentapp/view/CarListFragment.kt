@@ -35,10 +35,10 @@ class CarListFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(CarViewModel::class.java)
         viewModel.refresh()
 
-        Log.d("TEST", "masuk")
-
         binding.recViewCar.layoutManager = LinearLayoutManager(context)
         binding.recViewCar.adapter = carListAdapter
+
+        Log.d("cek", "masuk")
 
         val swipe = view.findViewById<SwipeRefreshLayout>(R.id.refreshLayout)
         binding.refreshLayout.setOnRefreshListener {
